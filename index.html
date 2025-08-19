@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock Trợ Năng</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f4f8;
+            color: #1a202c;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .slider-thumb::-webkit-slider-thumb {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #3b82f6;
+            cursor: pointer;
+            box-shadow: 0 0 6px rgba(59,130,246,0.5);
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 22px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #d1d5db;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #3b82f6;
+        }
+        input:checked + .slider:before {
+            transform: translateX(22px);
+        }
+        button:disabled {
+            background-color: #94a3b8;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md mx-auto">
+
+        <div class="card flex justify-between items-center">
+            <div class="flex items-center">
+                <i class='bx bxs-lock-open-alt text-2xl mr-3'></i>
+                <div>
+                    <p class="text-md font-semibold">Unlock Trợ Năng</p>
+                    <p class="text-xs text-gray-500">Hoạt Động IOS 15 - 18.6</p>
+                </div>
+            </div>
+            <label class="switch">
+                <input type="checkbox" class="setting-switch">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="card flex justify-between items-center">
+            <div class="flex items-center">
+                <i class='bx bx-target-lock text-xl mr-3'></i>
+                <span class="font-medium">Nhẹ Tâm</span>
+            </div>
+            <label class="switch">
+                <input type="checkbox" class="setting-switch">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="card flex justify-between items-center">
+            <div class="flex items-center">
+                <i class='bx bx-radar text-xl mr-3'></i>
+                <span class="font-medium">Sensi Touch</span>
+            </div>
+            <label class="switch">
+                <input type="checkbox" class="setting-switch">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="card">
+            <h2 class="text-md font-semibold mb-3 flex items-center">
+                <i class="bx bx-tachometer text-yellow-500 mr-2"></i> Độ Nhạy
+            </h2>
+
+            <div class="mb-3">
+                <div class="flex justify-between text-sm mb-1">
+                    <span> Tốc Độ Con Trỏ: <span class="text-green-500 font-medium slider-value">0.01</span></span>
+                </div>
+                <input type="range" min="0" max="2" step="0.01" value="0.01" class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer slider-thumb slider-input">
+            </div>
+
+            <div class="mb-3">
+                <div class="flex justify-between text-sm mb-1">
+                    <span> Nhìn Xung Quanh: <span class="text-green-500 font-medium slider-value">0.01</span></span>
+                </div>
+                <input type="range" min="0" max="2" step="0.01" value="0.01" class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer slider-thumb slider-input">
+            </div>
+
+            <div class="mb-3">
+                <div class="flex justify-between text-sm mb-1">
+                    <span> Độ Nhạy Drag: <span class="text-green-500 font-medium slider-value">0.01</span></span>
+                </div>
+                <input type="range" min="0" max="2" step="0.01" value="0.01" class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer slider-thumb slider-input">
+            </div>
+
+            <div class="mb-3">
+                <div class="flex justify-between text-sm mb-1">
+                    <span> Tốc Độ Cảm Ứng: <span class="text-green-500 font-medium slider-value">0.01</span></span>
+                </div>
+                <input type="range" min="0" max="2" step="0.01" value="0.01" class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer slider-thumb slider-input">
+            </div>
+        </div>
+
+        <!-- Nút Lưu -->
+        <button id="saveBtn" disabled class="w-full bg-blue-500 text-white py-2 rounded-lg shadow hover:bg-blue-600 transition mt-2">Lưu Cài Đặt</button>
+
+        <div class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-3 rounded-lg shadow-lg opacity-0 transition-opacity duration-300" id="notification">
+            <div class="flex items-center">
+                <i class="bx bx-check-circle mr-2"></i>
+                <span>Cài đặt đã được lưu thành công!</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const saveBtn = document.getElementById('saveBtn');
+        const notification = document.getElementById('notification');
+
+        const switches = document.querySelectorAll('.setting-switch');
+        const sliders = document.querySelectorAll('.slider-input');
+        const initialState = {
+            switches: Array.from(switches).map(s => s.checked),
+            sliders: Array.from(sliders).map(s => s.value)
+        };
+
+        function checkChanges() {
+            const switchChanged = Array.from(switches).some((s, i) => s.checked !== initialState.switches[i]);
+            const sliderChanged = Array.from(sliders).some((s, i) => s.value !== initialState.sliders[i]);
+            saveBtn.disabled = !(switchChanged || sliderChanged);
+        }
+
+        sliders.forEach((slider, idx) => {
+            const valueSpan = slider.parentElement.querySelector('.slider-value');
+            slider.addEventListener('input', () => {
+                valueSpan.textContent = parseFloat(slider.value).toFixed(2);
+                checkChanges();
+            });
+        });
+
+        switches.forEach((sw, idx) => {
+            sw.addEventListener('change', checkChanges);
+        });
+
+        saveBtn.addEventListener('click', () => {
+            notification.style.opacity = '1';
+            setTimeout(() => {
+                notification.style.opacity = '0';
+            }, 2500);
+
+            initialState.switches = Array.from(switches).map(s => s.checked);
+            initialState.sliders = Array.from(sliders).map(s => s.value);
+
+            saveBtn.disabled = true;
+        });
+    </script>
+</body>
+</html>
