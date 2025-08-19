@@ -7,39 +7,35 @@
     <array>
         <dict>
             <key>FullScreen</key>
-            <true/> 
-            <key>Icon</key>
-            <data>
-                <!-- img app = src base64 -->
-            </data>
+            <true/>
             <key>IsRemovable</key>
-            <true/> 
+            <true/>
             <key>Label</key>
-            <string>Trợ Năng FF Max</string> 
+            <string>Trợ Năng FF Max</string>
             <key>PayloadIdentifier</key>
-            <string>com.iosclub.webclip</string>
+            <string>com.iosclub.webclip.ffmax</string>
             <key>PayloadType</key>
             <string>com.apple.webClip.managed</string>
             <key>PayloadUUID</key>
-            <string>12345678-90AB-CDEF-1234-567890ABCDEF</string>
+            <string>3F2504E0-4F89-11D3-9A0C-0305E82C3301</string>
             <key>PayloadVersion</key>
             <integer>1</integer>
             <key>Precomposed</key>
             <false/>
             <key>URL</key>
-            <string>https://example.com/</string> <!-- Thay Url Host-->
+            <string>https://yourdomain.com/</string>
         </dict>
     </array>
     <key>PayloadDisplayName</key>
     <string>Trợ Năng FF Max</string>
     <key>PayloadIdentifier</key>
-    <string>com.iosclub.profile</string>
+    <string>com.iosclub.profile.ffmax</string>
     <key>PayloadRemovalDisallowed</key>
     <false/>
     <key>PayloadType</key>
     <string>Configuration</string>
     <key>PayloadUUID</key>
-    <string>ABCDEF12-3456-7890-ABCD-EF1234567890</string>
+    <string>4F89E0C1-25D4-41B6-A3B2-6F92C77F08F2</string>
     <key>PayloadVersion</key>
     <integer>1</integer>
 </dict>
